@@ -13,7 +13,7 @@ function Ignite() {
     setLoading(true)
     setGuidance(null)
     try {
-      const res = await axios.post('http://127.0.0.1:8000/api/ignite', {
+      const res = await axios.post('https://stratedge-ai.up.railway.app//api/ignite', {
         interests,
         strong_subjects: subjects,
         class_grade: grade

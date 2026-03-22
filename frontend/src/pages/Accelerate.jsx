@@ -18,15 +18,15 @@ function Accelerate() {
     setMarket(null)
     try {
       const [careerRes, gapRes, marketRes] = await Promise.all([
-        axios.post('http://127.0.0.1:8000/api/career-paths', {
+        axios.post('https://stratedge-ai.up.railway.app//api/career-paths', {
           skills,
           experience: `${experience} years professional`
         }),
-        axios.post('http://127.0.0.1:8000/api/skill-gap', {
+        axios.post('https://stratedge-ai.up.railway.app//api/skill-gap', {
           skills,
           target_role: role
         }),
-        axios.post('http://127.0.0.1:8000/api/market-insights', {
+        axios.post('https://stratedge-ai.up.railway.app//api/market-insights', {
           domain: role
         })
       ])
