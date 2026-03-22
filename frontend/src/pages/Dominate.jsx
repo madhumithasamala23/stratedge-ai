@@ -16,7 +16,7 @@ function Dominate() {
     setLoading(true)
     setRoast(null)
     try {
-      const res = await axios.post('https://stratedge-ai.up.railway.app//api/resume-roast', {
+      const res = await axios.post('https://stratedge-ai.up.railway.app/api/resume-roast', {
         resume_text: resumeText,
         target_role: role
       })
@@ -31,7 +31,7 @@ function Dominate() {
     if (!skills.trim()) return
     setInterviewLoading(true)
     try {
-      const res = await axios.post('https://stratedge-ai.up.railway.app//api/interview-question', {
+      const res = await axios.post('https://stratedge-ai.up.railway.app/api/interview-question', {
         role,
         skills,
         answer: answer,

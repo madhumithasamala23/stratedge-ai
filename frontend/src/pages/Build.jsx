@@ -15,11 +15,11 @@ function Build() {
     setGaps(null)
     try {
       const [careerRes, gapRes] = await Promise.all([
-        axios.post('https://stratedge-ai.up.railway.app//api/career-paths', {
+        axios.post('https://stratedge-ai.up.railway.app/api/career-paths', {
           skills,
           experience: 'college student'
         }),
-        axios.post('https://stratedge-ai.up.railway.app//api/skill-gap', {
+        axios.post('https://stratedge-ai.up.railway.app/api/skill-gap', {
           skills,
           target_role: targetRole
         })
